@@ -41,6 +41,7 @@ module.exports.places = [
   "Chophouse",
   "Hut",
   "Buffet",
-  "Saloon",
+  "Barbecue Joint",
+  "Waffle House",
   "Osteria",
 ];
