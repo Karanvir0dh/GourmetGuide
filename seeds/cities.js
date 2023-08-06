@@ -6,7 +6,7 @@ module.exports = [
     longitude: -79.3832,
     population: "2930000",
     rank: "1",
-    state: "Ontario",
+    province: "Ontario",
   },
   {
     city: "Vancouver",
@@ -15,7 +15,7 @@ module.exports = [
     longitude: -123.1207,
     population: "631000",
     rank: "2",
-    state: "British Columbia",
+    province: "British Columbia",
   },
   {
     city: "Montreal",
@@ -24,7 +24,7 @@ module.exports = [
     longitude: -73.5673,
     population: "1700000",
     rank: "3",
-    state: "Quebec",
+    province: "Quebec",
   },
   {
     city: "Calgary",
@@ -33,7 +33,7 @@ module.exports = [
     longitude: -114.0719,
     population: "1336000",
     rank: "4",
-    state: "Alberta",
+    province: "Alberta",
   },
   {
     city: "Edmonton",
@@ -42,7 +42,7 @@ module.exports = [
     longitude: -113.4938,
     population: "981280",
     rank: "5",
-    state: "Alberta",
+    province: "Alberta",
   },
   {
     city: "Ottawa",
@@ -51,7 +51,7 @@ module.exports = [
     longitude: -75.6972,
     population: "989567",
     rank: "6",
-    state: "Ontario",
+    province: "Ontario",
   },
   {
     city: "Winnipeg",
@@ -60,7 +60,7 @@ module.exports = [
     longitude: -97.1384,
     population: "705224",
     rank: "7",
-    state: "Manitoba",
+    province: "Manitoba",
   },
   {
     city: "Quebec City",
@@ -69,7 +69,7 @@ module.exports = [
     longitude: -71.2082,
     population: "531902",
     rank: "8",
-    state: "Quebec",
+    province: "Quebec",
   },
   {
     city: "Hamilton",
@@ -78,7 +78,7 @@ module.exports = [
     longitude: -79.8711,
     population: "536917",
     rank: "9",
-    state: "Ontario",
+    province: "Ontario",
   },
   {
     city: "Kitchener",
@@ -87,7 +87,7 @@ module.exports = [
     longitude: -80.4925,
     population: "240000",
     rank: "10",
-    state: "Ontario",
+    province: "Ontario",
   },
   {
     city: "London",
@@ -96,7 +96,7 @@ module.exports = [
     longitude: -81.2453,
     population: "404699",
     rank: "11",
-    state: "Ontario",
+    province: "Ontario",
   },
   {
     city: "Victoria",
@@ -105,7 +105,7 @@ module.exports = [
     longitude: -123.3656,
     population: "85792",
     rank: "12",
-    state: "British Columbia",
+    province: "British Columbia",
   },
   {
     city: "Halifax",
@@ -114,7 +114,7 @@ module.exports = [
     longitude: -63.5752,
     population: "403131",
     rank: "13",
-    state: "Nova Scotia",
+    province: "Nova Scotia",
   },
   {
     city: "Oshawa",
@@ -123,7 +123,7 @@ module.exports = [
     longitude: -78.8658,
     population: "166000",
     rank: "14",
-    state: "Ontario",
+    province: "Ontario",
   },
   {
     city: "Gatineau",
@@ -132,7 +132,7 @@ module.exports = [
     longitude: -75.7013,
     population: "276245",
     rank: "15",
-    state: "Quebec",
+    province: "Quebec",
   },
   {
     city: "Windsor",
@@ -141,7 +141,7 @@ module.exports = [
     longitude: -83.0364,
     population: "217188",
     rank: "16",
-    state: "Ontario",
+    province: "Ontario",
   },
   {
     city: "Saskatoon",
@@ -150,7 +150,7 @@ module.exports = [
     longitude: -106.67,
     population: "246376",
     rank: "17",
-    state: "Saskatchewan",
+    province: "Saskatchewan",
   },
   {
     city: "Regina",
@@ -159,7 +159,7 @@ module.exports = [
     longitude: -104.6189,
     population: "215106",
     rank: "18",
-    state: "Saskatchewan",
+    province: "Saskatchewan",
   },
   {
     city: "Sherbrooke",
@@ -168,7 +168,7 @@ module.exports = [
     longitude: -71.889,
     population: "166163",
     rank: "19",
-    state: "Quebec",
+    province: "Quebec",
   },
   {
     city: "St. John's",
@@ -177,7 +177,7 @@ module.exports = [
     longitude: -52.7126,
     population: "108860",
     rank: "20",
-    state: "Newfoundland and Labrador",
+    province: "Newfoundland and Labrador",
   },
   {
     city: "Barrie",
@@ -186,7 +186,7 @@ module.exports = [
     longitude: -79.6903,
     population: "147365",
     rank: "21",
-    state: "Ontario",
+    province: "Ontario",
   },
   {
     city: "Kelowna",
@@ -195,7 +195,7 @@ module.exports = [
     longitude: -119.4961,
     population: "127380",
     rank: "22",
-    state: "British Columbia",
+    province: "British Columbia",
   },
   {
     city: "Abbotsford",
@@ -204,7 +204,7 @@ module.exports = [
     longitude: -122.3045,
     population: "141397",
     rank: "23",
-    state: "British Columbia",
+    province: "British Columbia",
   },
   {
     city: "Sudbury",
@@ -213,7 +213,7 @@ module.exports = [
     longitude: -80.99,
     population: "161531",
     rank: "24",
-    state: "Ontario",
+    province: "Ontario",
   },
   {
     city: "Kingston",
@@ -222,7 +222,7 @@ module.exports = [
     longitude: -76.486,
     population: "137175",
     rank: "25",
-    state: "Ontario",
+    province: "Ontario",
   },
   {
     city: "Saguenay",
@@ -231,7 +231,7 @@ module.exports = [
     longitude: -71.067,
     population: "145949",
     rank: "26",
-    state: "Quebec",
+    province: "Quebec",
   },
   {
     city: "Trois-Rivières",
@@ -240,7 +240,7 @@ module.exports = [
     longitude: -72.5391,
     population: "134413",
     rank: "27",
-    state: "Quebec",
+    province: "Quebec",
   },
   {
     city: "Guelph",
@@ -249,7 +249,7 @@ module.exports = [
     longitude: -80.2482,
     population: "120545",
     rank: "28",
-    state: "Ontario",
+    province: "Ontario",
   },
   {
     city: "Moncton",
@@ -258,7 +258,7 @@ module.exports = [
     longitude: -64.7782,
     population: "71989",
     rank: "29",
-    state: "New Brunswick",
+    province: "New Brunswick",
   },
   {
     city: "Brantford",
@@ -267,7 +267,7 @@ module.exports = [
     longitude: -80.2644,
     population: "97496",
     rank: "30",
-    state: "Ontario",
+    province: "Ontario",
   },
   {
     city: "Thunder Bay",
@@ -276,7 +276,7 @@ module.exports = [
     longitude: -89.2512,
     population: "107909",
     rank: "31",
-    state: "Ontario",
+    province: "Ontario",
   },
   {
     city: "Saint John",
@@ -285,7 +285,7 @@ module.exports = [
     longitude: -66.0633,
     population: "67575",
     rank: "32",
-    state: "New Brunswick",
+    province: "New Brunswick",
   },
   {
     city: "Peterborough",
@@ -294,7 +294,7 @@ module.exports = [
     longitude: -78.3197,
     population: "81333",
     rank: "33",
-    state: "Ontario",
+    province: "Ontario",
   },
   {
     city: "Lethbridge",
@@ -303,7 +303,7 @@ module.exports = [
     longitude: -112.8468,
     population: "101482",
     rank: "34",
-    state: "Alberta",
+    province: "Alberta",
   },
   {
     city: "Newmarket",
@@ -312,7 +312,7 @@ module.exports = [
     longitude: -79.4595,
     population: "90000",
     rank: "35",
-    state: "Ontario",
+    province: "Ontario",
   },
   {
     city: "Sarnia",
@@ -321,7 +321,7 @@ module.exports = [
     longitude: -82.385,
     population: "71594",
     rank: "36",
-    state: "Ontario",
+    province: "Ontario",
   },
   {
     city: "Brossard",
@@ -330,7 +330,7 @@ module.exports = [
     longitude: -73.4504,
     population: "88470",
     rank: "37",
-    state: "Quebec",
+    province: "Quebec",
   },
   {
     city: "Prince George",
@@ -339,7 +339,7 @@ module.exports = [
     longitude: -122.7497,
     population: "74003",
     rank: "38",
-    state: "British Columbia",
+    province: "British Columbia",
   },
   {
     city: "Chilliwack",
@@ -348,7 +348,7 @@ module.exports = [
     longitude: -121.9515,
     population: "83952",
     rank: "39",
-    state: "British Columbia",
+    province: "British Columbia",
   },
   {
     city: "Maple Ridge",
@@ -357,7 +357,7 @@ module.exports = [
     longitude: -122.5984,
     population: "88256",
     rank: "40",
-    state: "British Columbia",
+    province: "British Columbia",
   },
   {
     city: "Drummondville",
@@ -366,7 +366,7 @@ module.exports = [
     longitude: -72.4845,
     population: "75800",
     rank: "41",
-    state: "Quebec",
+    province: "Quebec",
   },
   {
     city: "Saint-Jérôme",
@@ -375,7 +375,7 @@ module.exports = [
     longitude: -74.0036,
     population: "77720",
     rank: "42",
-    state: "Quebec",
+    province: "Quebec",
   },
   {
     city: "Grande Prairie",
@@ -384,7 +384,7 @@ module.exports = [
     longitude: -118.7977,
     population: "69058",
     rank: "43",
-    state: "Alberta",
+    province: "Alberta",
   },
   {
     city: "St. Albert",
@@ -393,7 +393,7 @@ module.exports = [
     longitude: -113.6256,
     population: "66658",
     rank: "44",
-    state: "Alberta",
+    province: "Alberta",
   },
   {
     city: "Sherwood Park",
@@ -402,7 +402,7 @@ module.exports = [
     longitude: -113.3187,
     population: "70507",
     rank: "45",
-    state: "Alberta",
+    province: "Alberta",
   },
   {
     city: "Belleville",
@@ -411,7 +411,7 @@ module.exports = [
     longitude: -77.3832,
     population: "50716",
     rank: "46",
-    state: "Ontario",
+    province: "Ontario",
   },
   {
     city: "Chatham-Kent",
@@ -420,7 +420,7 @@ module.exports = [
     longitude: -82.191,
     population: "101647",
     rank: "47",
-    state: "Ontario",
+    province: "Ontario",
   },
   {
     city: "North Vancouver",
@@ -429,7 +429,7 @@ module.exports = [
     longitude: -123.0732,
     population: "52698",
     rank: "48",
-    state: "British Columbia",
+    province: "British Columbia",
   },
   {
     city: "Kamloops",
@@ -438,7 +438,7 @@ module.exports = [
     longitude: -120.3273,
     population: "90504",
     rank: "49",
-    state: "British Columbia",
+    province: "British Columbia",
   },
   {
     city: "Sault Ste. Marie",
@@ -447,7 +447,7 @@ module.exports = [
     longitude: -84.3462,
     population: "73157",
     rank: "50",
-    state: "Ontario",
+    province: "Ontario",
   },
   {
     city: "Medicine Hat",
@@ -456,7 +456,7 @@ module.exports = [
     longitude: -110.6761,
     population: "63260",
     rank: "51",
-    state: "Alberta",
+    province: "Alberta",
   },
   {
     city: "Norfolk County",
@@ -465,7 +465,7 @@ module.exports = [
     longitude: -80.304,
     population: "64288",
     rank: "52",
-    state: "Ontario",
+    province: "Ontario",
   },
   {
     city: "Grande Prairie",
@@ -474,7 +474,7 @@ module.exports = [
     longitude: -118.7977,
     population: "63166",
     rank: "53",
-    state: "Alberta",
+    province: "Alberta",
   },
   {
     city: "Airdrie",
@@ -483,7 +483,7 @@ module.exports = [
     longitude: -114.0144,
     population: "73965",
     rank: "54",
-    state: "Alberta",
+    province: "Alberta",
   },
   {
     city: "Halton Hills",
@@ -492,7 +492,7 @@ module.exports = [
     longitude: -80.0177,
     population: "61876",
     rank: "55",
-    state: "Ontario",
+    province: "Ontario",
   },
   {
     city: "Saint-Hyacinthe",
@@ -501,7 +501,7 @@ module.exports = [
     longitude: -72.5667,
     population: "55634",
     rank: "56",
-    state: "Quebec",
+    province: "Quebec",
   },
   {
     city: "Lakewood",
@@ -510,7 +510,7 @@ module.exports = [
     longitude: -122.5185,
     population: "60000",
     rank: "57",
-    state: "Saskatchewan",
+    province: "Saskatchewan",
   },
   {
     city: "Pickering",
@@ -519,7 +519,7 @@ module.exports = [
     longitude: -79.0868,
     population: "91771",
     rank: "58",
-    state: "Ontario",
+    province: "Ontario",
   },
   {
     city: "Nanaimo",
@@ -528,7 +528,7 @@ module.exports = [
     longitude: -123.9401,
     population: "90472",
     rank: "59",
-    state: "British Columbia",
+    province: "British Columbia",
   },
   {
     city: "Kamloops",
@@ -537,7 +537,7 @@ module.exports = [
     longitude: -120.3273,
     population: "90280",
     rank: "60",
-    state: "British Columbia",
+    province: "British Columbia",
   },
   {
     city: "Niagara Falls",
@@ -546,7 +546,7 @@ module.exports = [
     longitude: -79.0849,
     population: "88912",
     rank: "61",
-    state: "Ontario",
+    province: "Ontario",
   },
   {
     city: "North Bay",
@@ -555,7 +555,7 @@ module.exports = [
     longitude: -79.4608,
     population: "51027",
     rank: "62",
-    state: "Ontario",
+    province: "Ontario",
   },
   {
     city: "Chilliwack",
@@ -564,7 +564,7 @@ module.exports = [
     longitude: -121.9515,
     population: "83578",
     rank: "63",
-    state: "British Columbia",
+    province: "British Columbia",
   },
   {
     city: "Dieppe",
@@ -573,7 +573,7 @@ module.exports = [
     longitude: -64.748,
     population: "25832",
     rank: "64",
-    state: "New Brunswick",
+    province: "New Brunswick",
   },
   {
     city: "Drummondville",
@@ -582,7 +582,7 @@ module.exports = [
     longitude: -72.4844,
     population: "76093",
     rank: "65",
-    state: "Quebec",
+    province: "Quebec",
   },
   {
     city: "Saint-Jérôme",
@@ -591,7 +591,7 @@ module.exports = [
     longitude: -74.0083,
     population: "75440",
     rank: "66",
-    state: "Quebec",
+    province: "Quebec",
   },
   {
     city: "Prince Albert",
@@ -600,7 +600,7 @@ module.exports = [
     longitude: -105.753,
     population: "35726",
     rank: "67",
-    state: "Saskatchewan",
+    province: "Saskatchewan",
   },
   {
     city: "Wood Buffalo",
@@ -609,7 +609,7 @@ module.exports = [
     longitude: -111.381,
     population: "69382",
     rank: "68",
-    state: "Alberta",
+    province: "Alberta",
   },
   {
     city: "New Westminster",
@@ -618,7 +618,7 @@ module.exports = [
     longitude: -122.9109,
     population: "70999",
     rank: "69",
-    state: "British Columbia",
+    province: "British Columbia",
   },
   {
     city: "Sherbrooke",
@@ -627,7 +627,7 @@ module.exports = [
     longitude: -71.9,
     population: "161323",
     rank: "70",
-    state: "Quebec",
+    province: "Quebec",
   },
   {
     city: "Saint John",
@@ -636,7 +636,7 @@ module.exports = [
     longitude: -66.058,
     population: "67594",
     rank: "71",
-    state: "New Brunswick",
+    province: "New Brunswick",
   },
   {
     city: "Caledon",
@@ -645,7 +645,7 @@ module.exports = [
     longitude: -79.866,
     population: "71594",
     rank: "72",
-    state: "Ontario",
+    province: "Ontario",
   },
   {
     city: "Clarington",
@@ -654,7 +654,7 @@ module.exports = [
     longitude: -78.6,
     population: "92413",
     rank: "73",
-    state: "Ontario",
+    province: "Ontario",
   },
   {
     city: "Milton",
@@ -663,7 +663,7 @@ module.exports = [
     longitude: -79.8831,
     population: "110128",
     rank: "74",
-    state: "Ontario",
+    province: "Ontario",
   },
   {
     city: "Stratford",
@@ -672,7 +672,7 @@ module.exports = [
     longitude: -80.9497,
     population: "31465",
     rank: "75",
-    state: "Ontario",
+    province: "Ontario",
   },
   {
     city: "Orillia",
@@ -681,7 +681,7 @@ module.exports = [
     longitude: -79.4207,
     population: "31956",
     rank: "76",
-    state: "Ontario",
+    province: "Ontario",
   },
   {
     city: "Mirabel",
@@ -690,7 +690,7 @@ module.exports = [
     longitude: -74.0851,
     population: "50997",
     rank: "77",
-    state: "Quebec",
+    province: "Quebec",
   },
   {
     city: "Rouyn-Noranda",
@@ -699,7 +699,7 @@ module.exports = [
     longitude: -79.0288,
     population: "41923",
     rank: "78",
-    state: "Quebec",
+    province: "Quebec",
   },
   {
     city: "Shawinigan",
@@ -708,7 +708,7 @@ module.exports = [
     longitude: -72.7491,
     population: "50614",
     rank: "79",
-    state: "Quebec",
+    province: "Quebec",
   },
   {
     city: "Brandon",
@@ -717,7 +717,7 @@ module.exports = [
     longitude: -99.95,
     population: "48923",
     rank: "80",
-    state: "Manitoba",
+    province: "Manitoba",
   },
   {
     city: "Rimouski",
@@ -726,7 +726,7 @@ module.exports = [
     longitude: -68.5236,
     population: "48263",
     rank: "81",
-    state: "Quebec",
+    province: "Quebec",
   },
   {
     city: "Cornwall",
@@ -735,7 +735,7 @@ module.exports = [
     longitude: -74.7303,
     population: "46589",
     rank: "82",
-    state: "Ontario",
+    province: "Ontario",
   },
   {
     city: "Georgina",
@@ -744,7 +744,7 @@ module.exports = [
     longitude: -79.4365,
     population: "47413",
     rank: "83",
-    state: "Ontario",
+    province: "Ontario",
   },
   {
     city: "Saint-Georges",
@@ -753,7 +753,7 @@ module.exports = [
     longitude: -70.6706,
     population: "34120",
     rank: "84",
-    state: "Quebec",
+    province: "Quebec",
   },
   {
     city: "Victoriaville",
@@ -762,7 +762,7 @@ module.exports = [
     longitude: -71.9667,
     population: "46714",
     rank: "85",
-    state: "Quebec",
+    province: "Quebec",
   },
   {
     city: "Vernon",
@@ -771,7 +771,7 @@ module.exports = [
     longitude: -119.272,
     population: "40834",
     rank: "86",
-    state: "British Columbia",
+    province: "British Columbia",
   },
   {
     city: "Penticton",
@@ -780,7 +780,7 @@ module.exports = [
     longitude: -119.5857,
     population: "33788",
     rank: "87",
-    state: "British Columbia",
+    province: "British Columbia",
   },
   {
     city: "Spruce Grove",
@@ -789,7 +789,7 @@ module.exports = [
     longitude: -113.9,
     population: "40963",
     rank: "88",
-    state: "Alberta",
+    province: "Alberta",
   },
   {
     city: "Parksville",
@@ -798,7 +798,7 @@ module.exports = [
     longitude: -124.3155,
     population: "12487",
     rank: "89",
-    state: "British Columbia",
+    province: "British Columbia",
   },
   {
     city: "Lloydminster",
@@ -807,7 +807,7 @@ module.exports = [
     longitude: -110.0081,
     population: "36594",
     rank: "90",
-    state: "Alberta",
+    province: "Alberta",
   },
   {
     city: "West Kelowna",
@@ -816,7 +816,7 @@ module.exports = [
     longitude: -119.5833,
     population: "35550",
     rank: "91",
-    state: "British Columbia",
+    province: "British Columbia",
   },
   {
     city: "Fort St. John",
@@ -825,7 +825,7 @@ module.exports = [
     longitude: -120.8496,
     population: "22195",
     rank: "92",
-    state: "British Columbia",
+    province: "British Columbia",
   },
   {
     city: "Port Moody",
@@ -834,7 +834,7 @@ module.exports = [
     longitude: -122.8256,
     population: "34834",
     rank: "93",
-    state: "British Columbia",
+    province: "British Columbia",
   },
   {
     city: "Chestermere",
@@ -843,7 +843,7 @@ module.exports = [
     longitude: -113.8187,
     population: "29531",
     rank: "94",
-    state: "Alberta",
+    province: "Alberta",
   },
   {
     city: "Mont-Laurier",
@@ -852,7 +852,7 @@ module.exports = [
     longitude: -75.5003,
     population: "13925",
     rank: "95",
-    state: "Quebec",
+    province: "Quebec",
   },
   {
     city: "Whitehorse",
@@ -861,7 +861,7 @@ module.exports = [
     longitude: -135.0568,
     population: "25961",
     rank: "96",
-    state: "Yukon",
+    province: "Yukon",
   },
   {
     city: "Sept-Îles",
@@ -870,7 +870,7 @@ module.exports = [
     longitude: -66.3821,
     population: "25166",
     rank: "97",
-    state: "Quebec",
+    province: "Quebec",
   },
   {
     city: "North Battleford",
@@ -879,7 +879,7 @@ module.exports = [
     longitude: -108.2967,
     population: "14926",
     rank: "98",
-    state: "Saskatchewan",
+    province: "Saskatchewan",
   },
   {
     city: "Brooks",
@@ -888,7 +888,7 @@ module.exports = [
     longitude: -111.8986,
     population: "14715",
     rank: "99",
-    state: "Alberta",
+    province: "Alberta",
   },
   {
     city: "Thompson",
@@ -897,6 +897,6 @@ module.exports = [
     longitude: -97.8558,
     population: "12764",
     rank: "100",
-    state: "Manitoba",
+    province: "Manitoba",
   },
 ];

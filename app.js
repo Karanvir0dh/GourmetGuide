@@ -10,7 +10,7 @@ mongoose
     console.log("Mongo CONNECTION OPEN!!!");
   })
   .catch((err) => {
-    console.log("Mongo OH NO ERROR!!!!");
+    console.log("Mongo ERROR!!!!");
     console.log(err);
   });
 
