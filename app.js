@@ -1,9 +1,11 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const path = require("path");
 const Restaurant = require("./models/restaurant");
 const methodOverride = require("method-override");
+const ejsMate = require("ejs-mate");
+const morgan = require("morgan");
 const app = express();
-const path = require("path");
 
 mongoose
   .connect("mongodb://127.0.0.1:27017/Gourmet-Guide")
@@ -15,11 +17,13 @@ mongoose
     console.log(err);
   });
 
+app.engine("ejs", ejsMate);
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
+app.use(morgan("tiny"));
 
 app.get("/", (req, res) => {
   res.render("home");
