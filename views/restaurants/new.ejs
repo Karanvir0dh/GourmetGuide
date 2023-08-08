@@ -1,17 +1,44 @@
 <% layout('layouts/boilerplate.ejs') %>
 
-<form action="/restaurants" method="POST">
-    <div>
-        <label for="name">Restaurant Name</label>
-        <input type="text" name="restaurant[title]" id="name">
+<div class="row">
+    <h1 class="text-center">New Restaurant</h1>
+    <div class="col-6 offset-3">
+        <form action="/restaurants" method="POST">
+            <div class="mb-3">
+                <label class="form-label" for="name">Restaurant Name</label>
+                <input class="form-control" type="text" name="restaurant[title]" id="name">
+            </div>
+
+            <div class="mb-3 ">
+                <div class="input-group">
+                    <label class="input-group-text" for="priceRange">Price Range</label>
+                    <select class="form-select" id="priceRange" name="restaurant[priceRange]">
+                        <option selected>Choose...</option>
+                        <option value="$">$</option>
+                        <option value="$$">$$</option>
+                        <option value="$$$">$$$</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="location">Location</label>
+                <input class="form-control" type="text" name="restaurant[location]" id="location">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="image">Image URL</label>
+                <input class="form-control" type="text" name="restaurant[image]" id="image">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="description">Description</label>
+                <textarea class="form-control" type="text" name="restaurant[description]" id="description"></textarea>
+            </div>
+
+            <button class="mb-3 btn btn-success">Add Restaurant</button>
+
+        </form>
+        <a href="/restaurants" class="btn btn-danger">Go back</a>
     </div>
-
-    <div>
-        <label for="location">Location</label>
-        <input type="text" name="restaurant[location]" id="location">
-    </div>
-
-    <button>Add Restaurant</button>
-
-</form>
-<a href="/restaurants"><button>Go back</button></a>
+</div>
