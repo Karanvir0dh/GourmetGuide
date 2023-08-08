@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Restaurant</title>
+</head>
+<form action="/restaurants/<%= restaurant._id %>?_method=PUT" method="POST">
+    <div>
+        <label for="title">Restaurant Name</label>
+        <input type="text" name="restaurant[title]" id="title" value="<%= restaurant.title%>">
+    </div>
+
+    <div>
+        <label for=" location">Location</label>
+        <input type="text" name="restaurant[location]" id="location" value="<%= restaurant.location %>">
+    </div>
+    <button>Save</button>
+</form>
+<a href="/restaurants/<%= restaurant._id %>"><button>Go Back</button></a>
+
+<body>
+
+</body>
+
+</html>

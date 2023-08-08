@@ -20,8 +20,8 @@ const seedDB = async () => {
   for (let i = 0; i < 45; i++) {
     const rand100 = Math.floor(Math.random() * 100);
     const restaurant = new Restaurant({
-      location: `${cities[rand100].city}, ${cities[rand100].province}`,
       title: `${sample(descriptors)} ${sample(places)}`,
+      location: `${cities[rand100].city}, ${cities[rand100].province}`,
     });
     await restaurant.save();
   }

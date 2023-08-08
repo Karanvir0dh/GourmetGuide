@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Restaurant</title>
+</head>
+
+<body>
+    <form action="/restaurants" method="POST">
+        <div>
+            <label for="name">Restaurant Name</label>
+            <input type="text" name="restaurant[title]" id="name">
+        </div>
+
+        <div>
+            <label for="location">Location</label>
+            <input type="text" name="restaurant[location]" id="location">
+        </div>
+
+        <button>Add Restaurant</button>
+
+    </form>
+    <a href="/restaurants"><button>Go back</button></a>
+
+
+</body>
+
+</html>
