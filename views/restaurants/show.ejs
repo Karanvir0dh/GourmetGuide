@@ -1,14 +1,42 @@
 <% layout('layouts/boilerplate.ejs') %>
 
+<div class="row">
+    <div class="col-6 offset-3">
+        <div class="card mb-3">
+            <img src="<%= restaurant.image %>" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"><%= restaurant.title %></h5>
+                <p class="card-text"><%= restaurant.description %></p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item text-secondary"><%= restaurant.location %></li>
+                <li class="list-group-item"><%= restaurant.priceRange %></li>
+            </ul>
+            <div class="card-body">
+                <a href="/restaurants/<%= restaurant._id %>/edit" class="btn btn-success mr-3 card-link">Edit</a>
+                <form action="/restaurants/<%= restaurant._id %>?_method=DELETE" method="POST"
+                    class="d-inline card-link">
+                    <button class="btn btn-danger">Delete</button>
+                </form>
+            </div>
+            <!-- <div class="card-footer ">
+                <a href="/restaurants" class="btn">All Restaurants</a>
+            </div> -->
+        </div>
+    </div>
+</div>
+
 <h1><%= restaurant.title %></h1>
 <h2><%= restaurant.location %></h2>
-<small class="text-secondary"><%= restaurant.priceRange %></small>
+<h6 class="text-secondary mb-3"><%= restaurant.priceRange %></h6>
 <img src="<%= restaurant.image %>" alt="">
 <p><%= restaurant.description %></p>
 <div>
-    <a href="/restaurants/<%= restaurant._id %>/edit"><button>Edit</button></a>
-    <form action="/restaurants/<%= restaurant._id %>?_method=DELETE" method="POST"><button>Delete</button></form>
+    <form action="/restaurants/<%= restaurant._id %>?_method=DELETE" method="POST" class="mb-3">
+        <a href="/restaurants/<%= restaurant._id %>/edit" class="btn btn-success mr-3">Edit</a>
+        <button class="btn btn-danger">Delete</button>
+    </form>
 </div>
 <footer>
-    <a href="/restaurants"><button>All Restaurants</button></a>
+    <a href="/restaurants" class="btn"><button>All Restaurants</button></a>
 </footer>
