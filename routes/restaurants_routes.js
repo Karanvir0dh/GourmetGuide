@@ -1,5 +1,19 @@
 const express = require("express");
 const router = express.Router();
+const catchAsync = require("../utils/CatchAsync");
+const ExpressError = require("../utils/ExpressError");
+const Restaurant = require("../models/restaurant");
+const { restaurantSchema } = require("../schemas");
+
+const validateRestaurant = (req, res, next) => {
+  const { error } = restaurantSchema.validate(req.body);
+  if (error) {
+    const msg = error.details.map((el) => el.message).join(",");
+    throw new ExpressError(msg, 400);
+  } else {
+    next();
+  }
+};
 
 router.get(
   "/",
@@ -19,7 +33,7 @@ router.post(
   catchAsync(async (req, res) => {
     const restaurant = new Restaurant(req.body.restaurant);
     await restaurant.save();
-    res.redirect(`/${restaurant._id}`);
+    res.redirect(`/restaurants/${restaurant._id}`);
   })
 );
 
@@ -53,7 +67,7 @@ router.put(
       },
       { new: true }
     );
-    res.redirect(`/${id}`);
+    res.redirect(`/restaurants/${id}`);
   })
 );
 
@@ -62,7 +76,7 @@ router.delete(
   catchAsync(async (req, res) => {
     const { id } = req.params;
     await Restaurant.findByIdAndDelete(id);
-    res.redirect("");
+    res.redirect("/restaurants");
   })
 );
 
