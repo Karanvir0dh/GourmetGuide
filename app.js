@@ -1,4 +1,5 @@
 const express = require("express");
+const app = express();
 const mongoose = require("mongoose");
 const path = require("path");
 const methodOverride = require("method-override");
@@ -8,9 +9,8 @@ const Restaurant = require("./models/restaurant");
 const Review = require("./models/review");
 const catchAsync = require("./utils/CatchAsync");
 const ExpressError = require("./utils/ExpressError");
-// const morgan = require("morgan");
-// const { error } = require("console");
-const app = express();
+const restaurantsRoutes = require("./routes/restaurants_routes");
+const reviewsRoutes = require("./routes/reviews_routes");
 
 mongoose
   .connect("mongodb://127.0.0.1:27017/Gourmet-Guide")
