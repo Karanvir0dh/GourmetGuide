@@ -1,13 +1,13 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
-const Restaurant = require("./models/restaurant");
 const methodOverride = require("method-override");
 const ejsMate = require("ejs-mate");
+const { restaurantSchema, reviewSchema } = require("./schemas");
+const Restaurant = require("./models/restaurant");
+const Review = require("./models/review");
 const catchAsync = require("./utils/CatchAsync");
 const ExpressError = require("./utils/ExpressError");
-const Joi = require("joi");
-const { restaurantSchema } = require("./schema");
 // const morgan = require("morgan");
 // const { error } = require("console");
 const app = express();
@@ -40,6 +40,16 @@ const validateRestaurant = (req, res, next) => {
   }
 };
 
+const validateReview = (req, res, next) => {
+  const { error } = reviewSchema.validate(req.body);
+  if (error) {
+    const msg = error.details.map((el) => el.message).join(",");
+    throw new ExpressError(msg, 400);
+  } else {
+    next();
+  }
+};
+
 app.get("/", (req, res) => {
   res.render("home");
 });
@@ -60,7 +70,6 @@ app.post(
   "/restaurants",
   validateRestaurant,
   catchAsync(async (req, res) => {
-    // if (!req.body.restaurant) throw new ExpressError("Invalid Restaurant Data", 400);
     const restaurant = new Restaurant(req.body.restaurant);
     await restaurant.save();
     res.redirect(`/restaurants/${restaurant._id}`);
@@ -71,7 +80,7 @@ app.get(
   "/restaurants/:id",
   catchAsync(async (req, res) => {
     const { id } = req.params;
-    const restaurant = await Restaurant.findById(id);
+    const restaurant = await Restaurant.findById(id).populate("reviews");
     res.render("restaurants/show", { restaurant });
   })
 );
@@ -107,6 +116,30 @@ app.delete(
     const { id } = req.params;
     await Restaurant.findByIdAndDelete(id);
     res.redirect("/restaurants");
+  })
+);
+
+app.post(
+  "/restaurants/:id/reviews",
+  validateReview,
+  catchAsync(async (req, res) => {
+    const { id } = req.params;
+    const restaurant = await Restaurant.findById(id);
+    const review = new Review(req.body.review);
+    restaurant.reviews.push(review);
+    await review.save();
+    await restaurant.save();
+    res.redirect(`/restaurants/${restaurant._id}`);
+  })
+);
+
+app.delete(
+  "/restaurants/:id/reviews/:reviewId",
+  catchAsync(async (req, res) => {
+    const { id, reviewId } = req.params;
+    Restaurant.findByIdAndUpdate(id, { $pull: { reviews: reviewId } });
+    await Review.findByIdAndDelete(reviewId);
+    res.redirect(`/restaurants/${id}`);
   })
 );
 
