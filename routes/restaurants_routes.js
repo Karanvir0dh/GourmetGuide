@@ -31,6 +31,7 @@ router.post(
   "/",
   validateRestaurant,
   catchAsync(async (req, res) => {
+    req.flash("success", "Successfully made a new restaurant!");
     const restaurant = new Restaurant(req.body.restaurant);
     await restaurant.save();
     res.redirect(`/restaurants/${restaurant._id}`);
