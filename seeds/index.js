@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const cities = require("./cities");
-const { places, descriptors } = require("./seedHelpers");
+const { places, descriptors } = require("./seed_helpers");
 const Restaurant = require("../models/restaurant");
 const axios = require("axios");
 
