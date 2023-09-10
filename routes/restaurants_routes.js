@@ -41,8 +41,11 @@ router.post(
 router.get(
   "/:id",
   catchAsync(async (req, res) => {
-    const { id } = req.params;
-    const restaurant = await Restaurant.findById(id).populate("reviews");
+    const restaurant = await Restaurant.findById(req.params.id).populate("reviews");
+    if (!restaurant) {
+      req.flash("error", " Cannot find that restaurant!");
+      return res.redirect("/restaurants");
+    }
     res.render("restaurants/show", { restaurant });
   })
 );
@@ -50,8 +53,11 @@ router.get(
 router.get(
   "/:id/edit",
   catchAsync(async (req, res) => {
-    const { id } = req.params;
-    const restaurant = await Restaurant.findById(id);
+    const restaurant = await Restaurant.findById(req.params.id);
+    if (!restaurant) {
+      req.flash("error", " Cannot find that restaurant!");
+      return res.redirect("/restaurants");
+    }
     res.render("restaurants/edit", { restaurant });
   })
 );
@@ -68,6 +74,7 @@ router.put(
       },
       { new: true }
     );
+    req.flash("success", "Successfully updated the restaurant!");
     res.redirect(`/restaurants/${id}`);
   })
 );
