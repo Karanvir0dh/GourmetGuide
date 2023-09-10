@@ -1,7 +1,9 @@
 const express = require("express");
 const router = express.Router();
+
 const catchAsync = require("../utils/CatchAsync");
 const ExpressError = require("../utils/ExpressError");
+
 const Restaurant = require("../models/restaurant");
 const { restaurantSchema } = require("../schemas");
 
