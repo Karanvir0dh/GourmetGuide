@@ -7,10 +7,10 @@ const axios = require("axios");
 mongoose
   .connect("mongodb://127.0.0.1:27017/Gourmet-Guide")
   .then(() => {
-    console.log("Mongo CONNECTION OPEN!!!");
+    console.log("Connected to database!");
   })
   .catch((err) => {
-    console.log("Mongo ERROR!!!!");
+    console.log("Database Error!");
     console.log(err);
   });
 
@@ -37,6 +37,7 @@ const seedDB = async () => {
   for (let i = 0; i < 30; i++) {
     const rand100 = Math.floor(Math.random() * 100);
     const restaurant = new Restaurant({
+      author: "64ff6352d6312720bbf69b82",
       title: `${sample(descriptors)} ${sample(places)}`,
       image: await seedImg(),
       priceRange: await randPrice(),

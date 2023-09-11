@@ -15,13 +15,21 @@
                 <li class="list-group-item text-secondary">
                     <%= restaurant.location %>
                 </li>
+                <li class="list-group-item">
+                    Submitted by <%= restaurant.author.username %>
+                </li>
             </ul>
+            <% if(currentUser && restaurant.author.equals(currentUser._id)) {%>
             <div class="card-body">
                 <a href="/restaurants/<%= restaurant._id %>/edit" class="btn btn-success mr-3 card-link">Edit</a>
                 <form action="/restaurants/<%= restaurant._id %>?_method=DELETE" method="POST"
                     class="d-inline card-link">
                     <button class="btn btn-danger">Delete</button>
                 </form>
+            </div>
+            <% } %>
+            <div class="card-footer text-secondary">
+                posted 2 days ago
             </div>
         </div>
     </div>

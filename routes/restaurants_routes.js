@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const { isLoggedIn } = require("../middleware");
 
 const catchAsync = require("../utils/CatchAsync");
 const ExpressError = require("../utils/ExpressError");
@@ -25,17 +26,19 @@ router.get(
   })
 );
 
-router.get("/new", async (req, res) => {
+router.get("/new", isLoggedIn, (req, res) => {
   res.render("restaurants/new");
 });
 
 router.post(
   "/",
+  isLoggedIn,
   validateRestaurant,
   catchAsync(async (req, res) => {
-    req.flash("success", "Successfully made a new restaurant!");
     const restaurant = new Restaurant(req.body.restaurant);
+    restaurant.author = req.user._id;
     await restaurant.save();
+    req.flash("success", "Successfully made a new restaurant!");
     res.redirect(`/restaurants/${restaurant._id}`);
   })
 );
@@ -43,7 +46,9 @@ router.post(
 router.get(
   "/:id",
   catchAsync(async (req, res) => {
-    const restaurant = await Restaurant.findById(req.params.id).populate("reviews");
+    const restaurant = await Restaurant.findById(req.params.id)
+      .populate("reviews")
+      .populate("author");
     if (!restaurant) {
       req.flash("error", " Cannot find that restaurant!");
       return res.redirect("/restaurants");
@@ -54,6 +59,7 @@ router.get(
 
 router.get(
   "/:id/edit",
+  isLoggedIn,
   catchAsync(async (req, res) => {
     const restaurant = await Restaurant.findById(req.params.id);
     if (!restaurant) {
@@ -66,6 +72,7 @@ router.get(
 
 router.put(
   "/:id",
+  isLoggedIn,
   validateRestaurant,
   catchAsync(async (req, res) => {
     const { id } = req.params;
@@ -83,6 +90,7 @@ router.put(
 
 router.delete(
   "/:id",
+  isLoggedIn,
   catchAsync(async (req, res) => {
     const { id } = req.params;
     await Restaurant.findByIdAndDelete(id);
