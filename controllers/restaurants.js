@@ -54,7 +54,12 @@ module.exports.editRestaurant = async (req, res) => {
     },
     { new: true }
   );
-  res;
+  const imgs = req.files.map((f) => ({
+    url: f.path,
+    filename: f.filename,
+  }));
+  restaurant.images.push(...imgs);
+  await restaurant.save();
   req.flash("success", "Successfully updated the restaurant!");
   res.redirect(`/restaurants/${id}`);
 };

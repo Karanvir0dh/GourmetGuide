@@ -39,11 +39,24 @@ const seedDB = async () => {
     const restaurant = new Restaurant({
       author: "64ff6352d6312720bbf69b82",
       title: `${sample(descriptors)} ${sample(places)}`,
-      image: await seedImg(),
       priceRange: await randPrice(),
       location: `${cities[rand100].city}, ${cities[rand100].province}`,
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus inventore consequuntur debitis itaque ipsa modi aliquam quod, exercitationem velit dicta repellendus officia, veniam sunt temporibus deleniti repudiandae quaerat, cupiditate cum.",
+      images: [
+        {
+          url: "https://res.cloudinary.com/dgegokbk6/image/upload/v1694637743/GourmetGuide/ktugqpih9qsw7p8x2cgs.jpg",
+          filename: "GourmetGuide/ktugqpih9qsw7p8x2cgs",
+        },
+        {
+          url: "https://res.cloudinary.com/dgegokbk6/image/upload/v1694637744/GourmetGuide/gohgkyzemb71ajjvha16.jpg",
+          filename: "GourmetGuide/gohgkyzemb71ajjvha16",
+        },
+        {
+          url: "https://res.cloudinary.com/dgegokbk6/image/upload/v1694637744/GourmetGuide/d5i5hmdzntpnhyf3bnfu.jpg",
+          filename: "GourmetGuide/d5i5hmdzntpnhyf3bnfu",
+        },
+      ],
     });
     await restaurant.save();
   }

@@ -25,6 +25,7 @@ router
   .put(
     isLoggedIn,
     isAuthor,
+    upload.array("image"),
     validateRestaurant,
     catchAsync(restaurants.editRestaurant)
   )
