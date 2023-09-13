@@ -4,7 +4,12 @@ const Review = require("./review");
 
 const RestaurantSchema = new Schema({
   title: String,
-  image: String,
+  images: [
+    {
+      url: String,
+      filename: String,
+    },
+  ],
   priceRange: String,
   description: String,
   location: String,

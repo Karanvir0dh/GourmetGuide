@@ -1,4 +1,5 @@
 const Restaurant = require("../models/restaurant");
+const { cloudinary } = require("../cloudinary");
 
 module.exports.index = async (req, res) => {
   const restaurants = await Restaurant.find({});
@@ -10,6 +11,10 @@ module.exports.renderNewForm = (req, res) => {
 };
 module.exports.createRestaurant = async (req, res) => {
   const restaurant = new Restaurant(req.body.restaurant);
+  restaurant.images = req.files.map((f) => ({
+    url: f.path,
+    filename: f.filename,
+  }));
   restaurant.author = req.user._id;
   await restaurant.save();
   req.flash("success", "Successfully made a new restaurant!");
