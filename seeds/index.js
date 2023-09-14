@@ -15,19 +15,20 @@ mongoose
   });
 
 const sample = (array) => array[Math.floor(Math.random() * array.length)];
-const seedImg = async () => {
-  try {
-    const resp = await axios.get("https://api.unsplash.com/photos/random", {
-      params: {
-        client_id: "DXqJegQ554wJdpqItRzosH351RQuc_ygVuj9fJzSPRU",
-        collections: 1028299,
-      },
-    });
-    return resp.data.urls.small;
-  } catch (err) {
-    console.error(err);
-  }
-};
+// const seedImg = async () => {
+//   try {
+//     const resp = await axios.get("https://api.unsplash.com/photos/random", {
+//       params: {
+//         client_id: "DXqJegQ554wJdpqItRzosH351RQuc_ygVuj9fJzSPRU",
+//         collections: 1028299,
+//       },
+//     });
+//     return resp.data.urls.small;
+//   } catch (err) {
+//     console.error(err);
+//   }
+// };
+
 const randPrice = async () => {
   return "$".repeat(Math.floor(Math.random() * 3 + 1));
 };
