@@ -1,6 +1,10 @@
 const Restaurant = require("../models/restaurant");
 const { cloudinary } = require("../cloudinary");
 
+const mbxGeocoding = require("@mapbox/mapbox-sdk/services/geocoding");
+const mapBoxToken = process.env.MAPBOX_TOKEN;
+const geocoder = mbxGeocoding({ accessToken: mapBoxToken });
+
 module.exports.index = async (req, res) => {
   const restaurants = await Restaurant.find({});
   res.render("restaurants/index", { restaurants });
@@ -10,13 +14,21 @@ module.exports.renderNewForm = (req, res) => {
   res.render("restaurants/new");
 };
 module.exports.createRestaurant = async (req, res) => {
+  const geoData = await geocoder
+    .forwardGeocode({
+      query: req.body.restaurant.location,
+      limit: 1,
+    })
+    .send();
   const restaurant = new Restaurant(req.body.restaurant);
+  restaurant.geometry = geoData.body.features[0].geometry;
   restaurant.images = req.files.map((f) => ({
     url: f.path,
     filename: f.filename,
   }));
   restaurant.author = req.user._id;
   await restaurant.save();
+  console.log(restaurant);
   req.flash("success", "Successfully made a new restaurant!");
   res.redirect(`/restaurants/${restaurant._id}`);
 };
@@ -60,6 +72,14 @@ module.exports.editRestaurant = async (req, res) => {
   }));
   restaurant.images.push(...imgs);
   await restaurant.save();
+  if (req.body.deleteImages) {
+    for (let filename of req.body.deleteImages) {
+      await cloudinary.uploader.destroy(filename);
+    }
+    await restaurant.updateOne({
+      $pull: { images: { filename: { $in: req.body.deleteImages } } },
+    });
+  }
   req.flash("success", "Successfully updated the restaurant!");
   res.redirect(`/restaurants/${id}`);
 };

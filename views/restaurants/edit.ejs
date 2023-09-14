@@ -61,6 +61,15 @@
                 <div class="invalid-feedback">
                     Please Add a Description!
                 </div>
+                <div class="mb-3">
+                    <% restaurant.images.forEach(function (img, i){%>
+                    <img src="<%= img.thumbnail %>" class="img-thumbnail" alt="">
+                    <div class="form-check-inline">
+                        <input type="checkbox" id="image-<%= i %>" name="deleteImages[]" value="<%= img.filename %>">
+                    </div>
+                    <label for="image-<%= i %>">Delete?</label>
+                    <% }) %>
+                </div>
             </div>
 
             <button class=" mb-3 btn btn-success">Save</button>
