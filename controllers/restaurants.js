@@ -28,7 +28,6 @@ module.exports.createRestaurant = async (req, res) => {
   }));
   restaurant.author = req.user._id;
   await restaurant.save();
-  console.log(restaurant);
   req.flash("success", "Successfully made a new restaurant!");
   res.redirect(`/restaurants/${restaurant._id}`);
 };
