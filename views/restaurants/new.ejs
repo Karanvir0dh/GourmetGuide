@@ -2,7 +2,7 @@
 
 <div class="row">
     <h1 class="text-center">New Restaurant</h1>
-    <div class="col-6 offset-3">
+    <div class="col-md-6 offset-md-3">
         <form action="/restaurants" method="POST" novalidate class="validation-form" enctype="multipart/form-data">
             <div class="mb-3">
                 <label class="form-label" for="name">Restaurant Name</label>
@@ -63,8 +63,9 @@
                     Please Add a Description!
                 </div>
             </div>
-
-            <button class="mb-3 btn btn-success">Add Restaurant</button>
+            <div class="mb-3">
+                <button class="btn btn-success">Add Restaurant</button>
+            </div>
 
         </form>
         <a href="/restaurants" class="btn btn-danger">Go back</a>

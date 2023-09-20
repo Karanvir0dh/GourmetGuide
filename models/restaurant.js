@@ -1,9 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const Review = require("./review");
-const { cloudinary } = require("../cloudinary");
-
-// https://res.cloudinary.com/dgegokbk6/image/upload/v1694639697/GourmetGuide/hgpveqjs0xul4vl0robc.jpg
 
 const ImageSchema = new Schema({
   url: String,
@@ -14,33 +11,44 @@ ImageSchema.virtual("thumbnail").get(function () {
   return this.url.replace("/upload", "/upload/w_200");
 });
 
-const RestaurantSchema = new Schema({
-  title: String,
-  images: [ImageSchema],
-  geometry: {
-    type: {
-      type: String,
-      enum: ["Point"],
-      required: true,
+const opts = { toJSON: { virtuals: true } };
+
+const RestaurantSchema = new Schema(
+  {
+    title: String,
+    images: [ImageSchema],
+    geometry: {
+      type: {
+        type: String,
+        enum: ["Point"],
+        required: true,
+      },
+      coordinates: {
+        type: [Number],
+        required: true,
+      },
     },
-    coordinates: {
-      type: [Number],
-      required: true,
-    },
-  },
-  priceRange: String,
-  description: String,
-  location: String,
-  author: {
-    type: Schema.Types.ObjectId,
-    ref: "User",
-  },
-  reviews: [
-    {
+    priceRange: String,
+    description: String,
+    location: String,
+    author: {
       type: Schema.Types.ObjectId,
-      ref: "Review",
+      ref: "User",
     },
-  ],
+    reviews: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Review",
+      },
+    ],
+  },
+  opts
+);
+
+RestaurantSchema.virtual("properties.popUpMarkup").get(function () {
+  return `
+  <strong><a href="/restaurants/${this._id}">${this.title}</a><strong>
+    <p>${this.location}</p>`;
 });
 
 RestaurantSchema.post("findOneAndDelete", async function (doc) {

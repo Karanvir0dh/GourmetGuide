@@ -1,902 +1,865 @@
 module.exports = [
   {
     city: "Toronto",
-    growth_from_2000_to_2023: "10.2%",
     latitude: 43.6532,
     longitude: -79.3832,
     population: "2930000",
-    rank: "1",
     province: "Ontario",
   },
   {
     city: "Vancouver",
-    growth_from_2000_to_2023: "9.6%",
+
     latitude: 49.2827,
     longitude: -123.1207,
     population: "631000",
-    rank: "2",
     province: "British Columbia",
   },
   {
     city: "Montreal",
-    growth_from_2000_to_2023: "7.4%",
+
     latitude: 45.5017,
     longitude: -73.5673,
     population: "1700000",
-    rank: "3",
     province: "Quebec",
   },
   {
     city: "Calgary",
-    growth_from_2000_to_2023: "14.6%",
+
     latitude: 51.0447,
     longitude: -114.0719,
     population: "1336000",
-    rank: "4",
     province: "Alberta",
   },
   {
     city: "Edmonton",
-    growth_from_2000_to_2023: "15.3%",
+
     latitude: 53.5461,
     longitude: -113.4938,
     population: "981280",
-    rank: "5",
     province: "Alberta",
   },
   {
     city: "Ottawa",
-    growth_from_2000_to_2023: "10.8%",
+
     latitude: 45.4215,
     longitude: -75.6972,
     population: "989567",
-    rank: "6",
     province: "Ontario",
   },
   {
     city: "Winnipeg",
-    growth_from_2000_to_2023: "6.3%",
+
     latitude: 49.8951,
     longitude: -97.1384,
     population: "705224",
-    rank: "7",
     province: "Manitoba",
   },
   {
     city: "Quebec City",
-    growth_from_2000_to_2023: "5.9%",
+
     latitude: 46.8139,
     longitude: -71.2082,
     population: "531902",
-    rank: "8",
     province: "Quebec",
   },
   {
     city: "Hamilton",
-    growth_from_2000_to_2023: "4.3%",
+
     latitude: 43.2557,
     longitude: -79.8711,
     population: "536917",
-    rank: "9",
     province: "Ontario",
   },
   {
     city: "Kitchener",
-    growth_from_2000_to_2023: "8.4%",
+
     latitude: 43.4516,
     longitude: -80.4925,
     population: "240000",
-    rank: "10",
+
     province: "Ontario",
   },
   {
     city: "London",
-    growth_from_2000_to_2023: "7.7%",
+
     latitude: 42.9849,
     longitude: -81.2453,
     population: "404699",
-    rank: "11",
+
     province: "Ontario",
   },
   {
     city: "Victoria",
-    growth_from_2000_to_2023: "6.3%",
+
     latitude: 48.4284,
     longitude: -123.3656,
     population: "85792",
-    rank: "12",
+
     province: "British Columbia",
   },
   {
     city: "Halifax",
-    growth_from_2000_to_2023: "9.5%",
+
     latitude: 44.6488,
     longitude: -63.5752,
     population: "403131",
-    rank: "13",
+
     province: "Nova Scotia",
   },
   {
     city: "Oshawa",
-    growth_from_2000_to_2023: "6.2%",
+
     latitude: 43.8971,
     longitude: -78.8658,
     population: "166000",
-    rank: "14",
+
     province: "Ontario",
   },
   {
     city: "Gatineau",
-    growth_from_2000_to_2023: "8.9%",
+
     latitude: 45.4765,
     longitude: -75.7013,
     population: "276245",
-    rank: "15",
+
     province: "Quebec",
   },
   {
     city: "Windsor",
-    growth_from_2000_to_2023: "3.1%",
+
     latitude: 42.3149,
     longitude: -83.0364,
     population: "217188",
-    rank: "16",
+
     province: "Ontario",
   },
   {
     city: "Saskatoon",
-    growth_from_2000_to_2023: "13.5%",
+
     latitude: 52.1332,
     longitude: -106.67,
     population: "246376",
-    rank: "17",
+
     province: "Saskatchewan",
   },
   {
     city: "Regina",
-    growth_from_2000_to_2023: "11.6%",
+
     latitude: 50.4452,
     longitude: -104.6189,
     population: "215106",
-    rank: "18",
+
     province: "Saskatchewan",
   },
   {
     city: "Sherbrooke",
-    growth_from_2000_to_2023: "5.1%",
+
     latitude: 45.403,
     longitude: -71.889,
     population: "166163",
-    rank: "19",
+
     province: "Quebec",
   },
   {
     city: "St. John's",
-    growth_from_2000_to_2023: "4.6%",
+
     latitude: 47.5615,
     longitude: -52.7126,
     population: "108860",
-    rank: "20",
+
     province: "Newfoundland and Labrador",
   },
   {
     city: "Barrie",
-    growth_from_2000_to_2023: "5.2%",
+
     latitude: 44.3894,
     longitude: -79.6903,
     population: "147365",
-    rank: "21",
+
     province: "Ontario",
   },
   {
     city: "Kelowna",
-    growth_from_2000_to_2023: "8.9%",
+
     latitude: 49.8877,
     longitude: -119.4961,
     population: "127380",
-    rank: "22",
+
     province: "British Columbia",
   },
   {
     city: "Abbotsford",
-    growth_from_2000_to_2023: "5.9%",
+
     latitude: 49.0504,
     longitude: -122.3045,
     population: "141397",
-    rank: "23",
+
     province: "British Columbia",
   },
   {
     city: "Sudbury",
-    growth_from_2000_to_2023: "0.7%",
+
     latitude: 46.4917,
     longitude: -80.99,
     population: "161531",
-    rank: "24",
+
     province: "Ontario",
   },
   {
     city: "Kingston",
-    growth_from_2000_to_2023: "1.3%",
+
     latitude: 44.2312,
     longitude: -76.486,
     population: "137175",
-    rank: "25",
+
     province: "Ontario",
   },
   {
     city: "Saguenay",
-    growth_from_2000_to_2023: "-0.7%",
+
     latitude: 48.4285,
     longitude: -71.067,
     population: "145949",
-    rank: "26",
+
     province: "Quebec",
   },
   {
     city: "Trois-Rivières",
-    growth_from_2000_to_2023: "2.2%",
+
     latitude: 46.3432,
     longitude: -72.5391,
     population: "134413",
-    rank: "27",
+
     province: "Quebec",
   },
   {
     city: "Guelph",
-    growth_from_2000_to_2023: "9.3%",
+
     latitude: 43.5448,
     longitude: -80.2482,
     population: "120545",
-    rank: "28",
+
     province: "Ontario",
   },
   {
     city: "Moncton",
-    growth_from_2000_to_2023: "8.4%",
+
     latitude: 46.0878,
     longitude: -64.7782,
     population: "71989",
-    rank: "29",
+
     province: "New Brunswick",
   },
   {
     city: "Brantford",
-    growth_from_2000_to_2023: "6.7%",
+
     latitude: 43.1394,
     longitude: -80.2644,
     population: "97496",
-    rank: "30",
+
     province: "Ontario",
   },
   {
     city: "Thunder Bay",
-    growth_from_2000_to_2023: "-0.5%",
+
     latitude: 48.3809,
     longitude: -89.2512,
     population: "107909",
-    rank: "31",
+
     province: "Ontario",
   },
   {
     city: "Saint John",
-    growth_from_2000_to_2023: "-3.1%",
+
     latitude: 45.2733,
     longitude: -66.0633,
     population: "67575",
-    rank: "32",
+
     province: "New Brunswick",
   },
   {
     city: "Peterborough",
-    growth_from_2000_to_2023: "2.8%",
+
     latitude: 44.3031,
     longitude: -78.3197,
     population: "81333",
-    rank: "33",
+
     province: "Ontario",
   },
   {
     city: "Lethbridge",
-    growth_from_2000_to_2023: "17.5%",
+
     latitude: 49.6956,
     longitude: -112.8468,
     population: "101482",
-    rank: "34",
+
     province: "Alberta",
   },
   {
     city: "Newmarket",
-    growth_from_2000_to_2023: "5.6%",
+
     latitude: 44.0582,
     longitude: -79.4595,
     population: "90000",
-    rank: "35",
+
     province: "Ontario",
   },
   {
     city: "Sarnia",
-    growth_from_2000_to_2023: "-1.4%",
+
     latitude: 42.9764,
     longitude: -82.385,
     population: "71594",
-    rank: "36",
+
     province: "Ontario",
   },
   {
     city: "Brossard",
-    growth_from_2000_to_2023: "11.8%",
+
     latitude: 45.4453,
     longitude: -73.4504,
     population: "88470",
-    rank: "37",
+
     province: "Quebec",
   },
   {
     city: "Prince George",
-    growth_from_2000_to_2023: "4.1%",
+
     latitude: 53.9171,
     longitude: -122.7497,
     population: "74003",
-    rank: "38",
+
     province: "British Columbia",
   },
   {
     city: "Chilliwack",
-    growth_from_2000_to_2023: "12.6%",
+
     latitude: 49.1579,
     longitude: -121.9515,
     population: "83952",
-    rank: "39",
+
     province: "British Columbia",
   },
   {
     city: "Maple Ridge",
-    growth_from_2000_to_2023: "12.7%",
+
     latitude: 49.2194,
     longitude: -122.5984,
     population: "88256",
-    rank: "40",
+
     province: "British Columbia",
   },
   {
     city: "Drummondville",
-    growth_from_2000_to_2023: "5.7%",
+
     latitude: 45.8876,
     longitude: -72.4845,
     population: "75800",
-    rank: "41",
+
     province: "Quebec",
   },
   {
     city: "Saint-Jérôme",
-    growth_from_2000_to_2023: "6.9%",
+
     latitude: 45.7804,
     longitude: -74.0036,
     population: "77720",
-    rank: "42",
+
     province: "Quebec",
   },
   {
     city: "Grande Prairie",
-    growth_from_2000_to_2023: "23.6%",
+
     latitude: 55.1704,
     longitude: -118.7977,
     population: "69058",
-    rank: "43",
+
     province: "Alberta",
   },
   {
     city: "St. Albert",
-    growth_from_2000_to_2023: "6.3%",
+
     latitude: 53.6305,
     longitude: -113.6256,
     population: "66658",
-    rank: "44",
+
     province: "Alberta",
   },
   {
     city: "Sherwood Park",
-    growth_from_2000_to_2023: "9.0%",
+
     latitude: 53.5168,
     longitude: -113.3187,
     population: "70507",
-    rank: "45",
+
     province: "Alberta",
   },
   {
     city: "Belleville",
-    growth_from_2000_to_2023: "1.2%",
+
     latitude: 44.1628,
     longitude: -77.3832,
     population: "50716",
-    rank: "46",
+
     province: "Ontario",
   },
   {
     city: "Chatham-Kent",
-    growth_from_2000_to_2023: "-3.5%",
+
     latitude: 42.4042,
     longitude: -82.191,
     population: "101647",
-    rank: "47",
+
     province: "Ontario",
   },
   {
     city: "North Vancouver",
-    growth_from_2000_to_2023: "3.7%",
+
     latitude: 49.3205,
     longitude: -123.0732,
     population: "52698",
-    rank: "48",
+
     province: "British Columbia",
   },
   {
     city: "Kamloops",
-    growth_from_2000_to_2023: "6.4%",
+
     latitude: 50.6745,
     longitude: -120.3273,
     population: "90504",
-    rank: "49",
+
     province: "British Columbia",
   },
   {
     city: "Sault Ste. Marie",
-    growth_from_2000_to_2023: "-1.7%",
+
     latitude: 46.5219,
     longitude: -84.3462,
     population: "73157",
-    rank: "50",
+
     province: "Ontario",
   },
   {
     city: "Medicine Hat",
-    growth_from_2000_to_2023: "8.9%",
+
     latitude: 50.0405,
     longitude: -110.6761,
     population: "63260",
-    rank: "51",
+
     province: "Alberta",
   },
   {
     city: "Norfolk County",
-    growth_from_2000_to_2023: "0.9%",
+
     latitude: 42.8371,
     longitude: -80.304,
     population: "64288",
-    rank: "52",
+
     province: "Ontario",
   },
   {
     city: "Grande Prairie",
-    growth_from_2000_to_2023: "14.6%",
+
     latitude: 55.1704,
     longitude: -118.7977,
     population: "63166",
-    rank: "53",
+
     province: "Alberta",
   },
   {
     city: "Airdrie",
-    growth_from_2000_to_2023: "85.3%",
+
     latitude: 51.2917,
     longitude: -114.0144,
     population: "73965",
-    rank: "54",
+
     province: "Alberta",
   },
   {
     city: "Halton Hills",
-    growth_from_2000_to_2023: "13.7%",
+
     latitude: 43.6467,
     longitude: -80.0177,
     population: "61876",
-    rank: "55",
+
     province: "Ontario",
   },
   {
     city: "Saint-Hyacinthe",
-    growth_from_2000_to_2023: "4.1%",
+
     latitude: 45.6,
     longitude: -72.5667,
     population: "55634",
-    rank: "56",
+
     province: "Quebec",
   },
   {
     city: "Lakewood",
-    growth_from_2000_to_2023: "3.9%",
+
     latitude: 47.1718,
     longitude: -122.5185,
     population: "60000",
-    rank: "57",
+
     province: "Saskatchewan",
   },
   {
     city: "Pickering",
-    growth_from_2000_to_2023: "7.9%",
+
     latitude: 43.8384,
     longitude: -79.0868,
     population: "91771",
-    rank: "58",
+
     province: "Ontario",
   },
   {
     city: "Nanaimo",
-    growth_from_2000_to_2023: "9.1%",
+
     latitude: 49.1659,
     longitude: -123.9401,
     population: "90472",
-    rank: "59",
+
     province: "British Columbia",
   },
   {
     city: "Kamloops",
-    growth_from_2000_to_2023: "7.2%",
+
     latitude: 50.6745,
     longitude: -120.3273,
     population: "90280",
-    rank: "60",
+
     province: "British Columbia",
   },
   {
     city: "Niagara Falls",
-    growth_from_2000_to_2023: "4.6%",
+
     latitude: 43.0896,
     longitude: -79.0849,
     population: "88912",
-    rank: "61",
+
     province: "Ontario",
   },
   {
     city: "North Bay",
-    growth_from_2000_to_2023: "-3.3%",
+
     latitude: 46.3091,
     longitude: -79.4608,
     population: "51027",
-    rank: "62",
+
     province: "Ontario",
   },
   {
     city: "Chilliwack",
-    growth_from_2000_to_2023: "12.7%",
+
     latitude: 49.1579,
     longitude: -121.9515,
     population: "83578",
-    rank: "63",
+
     province: "British Columbia",
   },
   {
     city: "Dieppe",
-    growth_from_2000_to_2023: "16.2%",
+
     latitude: 46.0965,
     longitude: -64.748,
     population: "25832",
-    rank: "64",
+
     province: "New Brunswick",
   },
   {
     city: "Drummondville",
-    growth_from_2000_to_2023: "7.3%",
+
     latitude: 45.8803,
     longitude: -72.4844,
     population: "76093",
-    rank: "65",
+
     province: "Quebec",
   },
   {
     city: "Saint-Jérôme",
-    growth_from_2000_to_2023: "6.7%",
+
     latitude: 45.764,
     longitude: -74.0083,
     population: "75440",
-    rank: "66",
+
     province: "Quebec",
   },
   {
     city: "Prince Albert",
-    growth_from_2000_to_2023: "2.4%",
+
     latitude: 53.2033,
     longitude: -105.753,
     population: "35726",
-    rank: "67",
+
     province: "Saskatchewan",
   },
   {
     city: "Wood Buffalo",
-    growth_from_2000_to_2023: "12.0%",
+
     latitude: 56.7268,
     longitude: -111.381,
     population: "69382",
-    rank: "68",
+
     province: "Alberta",
   },
   {
     city: "New Westminster",
-    growth_from_2000_to_2023: "7.3%",
+
     latitude: 49.2057,
     longitude: -122.9109,
     population: "70999",
-    rank: "69",
+
     province: "British Columbia",
   },
   {
     city: "Sherbrooke",
-    growth_from_2000_to_2023: "9.2%",
+
     latitude: 45.4,
     longitude: -71.9,
     population: "161323",
-    rank: "70",
+
     province: "Quebec",
   },
   {
     city: "Saint John",
-    growth_from_2000_to_2023: "-4.3%",
+
     latitude: 45.2796,
     longitude: -66.058,
     population: "67594",
-    rank: "71",
+
     province: "New Brunswick",
   },
   {
     city: "Caledon",
-    growth_from_2000_to_2023: "4.5%",
+
     latitude: 43.8668,
     longitude: -79.866,
     population: "71594",
-    rank: "72",
+
     province: "Ontario",
   },
   {
     city: "Clarington",
-    growth_from_2000_to_2023: "6.2%",
+
     latitude: 43.9345,
     longitude: -78.6,
     population: "92413",
-    rank: "73",
+
     province: "Ontario",
   },
   {
     city: "Milton",
-    growth_from_2000_to_2023: "56.5%",
+
     latitude: 43.5134,
     longitude: -79.8831,
     population: "110128",
-    rank: "74",
+
     province: "Ontario",
   },
   {
     city: "Stratford",
-    growth_from_2000_to_2023: "4.2%",
+
     latitude: 43.3666,
     longitude: -80.9497,
     population: "31465",
-    rank: "75",
+
     province: "Ontario",
   },
   {
     city: "Orillia",
-    growth_from_2000_to_2023: "5.8%",
+
     latitude: 44.6087,
     longitude: -79.4207,
     population: "31956",
-    rank: "76",
+
     province: "Ontario",
   },
   {
     city: "Mirabel",
-    growth_from_2000_to_2023: "26.2%",
+
     latitude: 45.6501,
     longitude: -74.0851,
     population: "50997",
-    rank: "77",
+
     province: "Quebec",
   },
   {
     city: "Rouyn-Noranda",
-    growth_from_2000_to_2023: "0.6%",
+
     latitude: 48.2398,
     longitude: -79.0288,
     population: "41923",
-    rank: "78",
+
     province: "Quebec",
   },
   {
     city: "Shawinigan",
-    growth_from_2000_to_2023: "-3.8%",
+
     latitude: 46.5668,
     longitude: -72.7491,
     population: "50614",
-    rank: "79",
+
     province: "Quebec",
   },
   {
     city: "Brandon",
-    growth_from_2000_to_2023: "7.2%",
+
     latitude: 49.8485,
     longitude: -99.95,
     population: "48923",
-    rank: "80",
+
     province: "Manitoba",
   },
   {
     city: "Rimouski",
-    growth_from_2000_to_2023: "2.6%",
+
     latitude: 48.4488,
     longitude: -68.5236,
     population: "48263",
-    rank: "81",
+
     province: "Quebec",
   },
   {
     city: "Cornwall",
-    growth_from_2000_to_2023: "0.5%",
+
     latitude: 45.0215,
     longitude: -74.7303,
     population: "46589",
-    rank: "82",
+
     province: "Ontario",
   },
   {
     city: "Georgina",
-    growth_from_2000_to_2023: "9.6%",
+
     latitude: 44.2968,
     longitude: -79.4365,
     population: "47413",
-    rank: "83",
+
     province: "Ontario",
   },
   {
     city: "Saint-Georges",
-    growth_from_2000_to_2023: "5.1%",
     latitude: 46.1176,
     longitude: -70.6706,
     population: "34120",
-    rank: "84",
     province: "Quebec",
   },
   {
     city: "Victoriaville",
-    growth_from_2000_to_2023: "5.2%",
     latitude: 46.0567,
     longitude: -71.9667,
     population: "46714",
-    rank: "85",
     province: "Quebec",
   },
   {
     city: "Vernon",
-    growth_from_2000_to_2023: "6.1%",
     latitude: 50.267,
     longitude: -119.272,
     population: "40834",
-    rank: "86",
     province: "British Columbia",
   },
   {
     city: "Penticton",
-    growth_from_2000_to_2023: "3.9%",
     latitude: 49.4785,
     longitude: -119.5857,
     population: "33788",
-    rank: "87",
     province: "British Columbia",
   },
   {
     city: "Spruce Grove",
-    growth_from_2000_to_2023: "35.2%",
     latitude: 53.5493,
     longitude: -113.9,
     population: "40963",
-    rank: "88",
     province: "Alberta",
   },
   {
     city: "Parksville",
-    growth_from_2000_to_2023: "5.6%",
     latitude: 49.3195,
     longitude: -124.3155,
     population: "12487",
-    rank: "89",
     province: "British Columbia",
   },
   {
     city: "Lloydminster",
-    growth_from_2000_to_2023: "13.4%",
     latitude: 53.278,
     longitude: -110.0081,
     population: "36594",
-    rank: "90",
     province: "Alberta",
   },
   {
     city: "West Kelowna",
-    growth_from_2000_to_2023: "9.1%",
     latitude: 49.8625,
     longitude: -119.5833,
     population: "35550",
-    rank: "91",
     province: "British Columbia",
   },
   {
     city: "Fort St. John",
-    growth_from_2000_to_2023: "13.9%",
     latitude: 56.2496,
     longitude: -120.8496,
     population: "22195",
-    rank: "92",
     province: "British Columbia",
   },
   {
     city: "Port Moody",
-    growth_from_2000_to_2023: "5.6%",
     latitude: 49.2839,
     longitude: -122.8256,
     population: "34834",
-    rank: "93",
     province: "British Columbia",
   },
   {
     city: "Chestermere",
-    growth_from_2000_to_2023: "129.2%",
     latitude: 51.0374,
     longitude: -113.8187,
     population: "29531",
-    rank: "94",
     province: "Alberta",
   },
   {
     city: "Mont-Laurier",
-    growth_from_2000_to_2023: "4.3%",
     latitude: 46.5501,
     longitude: -75.5003,
     population: "13925",
-    rank: "95",
     province: "Quebec",
   },
   {
     city: "Whitehorse",
-    growth_from_2000_to_2023: "7.1%",
     latitude: 60.7212,
     longitude: -135.0568,
     population: "25961",
-    rank: "96",
     province: "Yukon",
   },
   {
     city: "Sept-Îles",
-    growth_from_2000_to_2023: "-2.7%",
     latitude: 50.2001,
     longitude: -66.3821,
     population: "25166",
-    rank: "97",
     province: "Quebec",
   },
   {
     city: "North Battleford",
-    growth_from_2000_to_2023: "1.3%",
     latitude: 52.7769,
     longitude: -108.2967,
     population: "14926",
-    rank: "98",
     province: "Saskatchewan",
   },
   {
     city: "Brooks",
-    growth_from_2000_to_2023: "5.4%",
     latitude: 50.5642,
     longitude: -111.8986,
     population: "14715",
-    rank: "99",
     province: "Alberta",
   },
   {
     city: "Thompson",
-    growth_from_2000_to_2023: "-2.9%",
     latitude: 55.7435,
     longitude: -97.8558,
     population: "12764",
-    rank: "100",
     province: "Manitoba",
+  },
+  {
+    city: "Charlottetown",
+    latitude: 46.2382,
+    longitude: -63.1311,
+    population: "36585",
+    province: "Prince Edward Island",
   },
 ];

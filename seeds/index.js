@@ -21,7 +21,7 @@ const randPrice = async () => {
 
 const seedDB = async () => {
   await Restaurant.deleteMany({});
-  for (let i = 0; i < 30; i++) {
+  for (let i = 0; i < 350; i++) {
     const rand100 = Math.floor(Math.random() * 100);
     const restaurant = new Restaurant({
       author: "64ff6352d6312720bbf69b82",
@@ -31,7 +31,10 @@ const seedDB = async () => {
 
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus inventore consequuntur debitis itaque ipsa modi aliquam quod, exercitationem velit dicta repellendus officia, veniam sunt temporibus deleniti repudiandae quaerat, cupiditate cum.",
-      geometry: { type: "Point", coordinates: [-81.249607, 42.983675] },
+      geometry: {
+        type: "Point",
+        coordinates: [cities[rand100].longitude, cities[rand100].latitude],
+      },
       images: [
         {
           url: "https://res.cloudinary.com/dgegokbk6/image/upload/v1694637743/GourmetGuide/ktugqpih9qsw7p8x2cgs.jpg",
