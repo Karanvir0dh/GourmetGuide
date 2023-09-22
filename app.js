@@ -1,7 +1,9 @@
+// Check if not in production mode, load environment variables
 if (process.env.NODE_ENV !== "production") {
   require("dotenv").config();
 }
 
+// Import required modules and libraries
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -18,14 +20,15 @@ const mongoSanitize = require("express-mongo-sanitize");
 const helmet = require("helmet");
 const MongoStore = require("connect-mongo");
 
+// Import routes
 const userRoutes = require("./routes/user_routes");
 const restaurantRoutes = require("./routes/restaurants_routes");
 const reviewRoutes = require("./routes/reviews_routes");
 const dbUrl = process.env.DB_URL;
 
+// Connect to the database
 mongoose
-  .connect("mongodb://127.0.0.1:27017/Gourmet-Guide")
-  // .connect(dbUrl)
+  .connect(dbUrl)
   .then(() => {
     console.log("Connected to database!");
   })
@@ -34,15 +37,18 @@ mongoose
     console.log(err);
   });
 
+// Set up EJS as the templating engine
 app.engine("ejs", ejsMate);
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
+// Middleware setup
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(mongoSanitize());
 
+// Configure sessions with MongoDB for persistence
 const store = MongoStore.create({
   mongoUrl: dbUrl,
   touchAfter: 24 * 60 * 60,
@@ -70,8 +76,11 @@ const sessionConfig = {
 };
 app.use(session(sessionConfig));
 app.use(flash());
+
+// Use helmet for security headers
 app.use(helmet());
 
+// Configure Content Security Policy with helmet
 const scriptSrcUrls = [
   "https://stackpath.bootstrapcdn.com/",
   "https://api.tiles.mapbox.com/",
@@ -118,13 +127,14 @@ app.use(
   })
 );
 
+// Passport.js setup for authentication
 app.use(passport.initialize());
 app.use(passport.session());
 passport.use(new LocalStrategy(User.authenticate()));
-
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
+// Middleware to set up local variables for views
 app.use((req, res, next) => {
   res.locals.currentUser = req.user;
   res.locals.success = req.flash("success");
@@ -132,18 +142,24 @@ app.use((req, res, next) => {
   next();
 });
 
+//User routes
 app.use("/", userRoutes);
+//Restaurant routes
 app.use("/restaurants", restaurantRoutes);
+//Review routes
 app.use("/restaurants/:id/reviews", reviewRoutes);
 
+// Default route
 app.get("/", (req, res) => {
   res.render("home");
 });
 
+// Catch-all route for handling 404 errors
 app.all("*", (req, res, next) => {
   next(new ExpressError("Page Not Found", 404));
 });
 
+// Error handling middleware
 app.use((err, req, res, next) => {
   const { statusCode = 500 } = err;
   if (!err.msg) {
@@ -152,6 +168,7 @@ app.use((err, req, res, next) => {
   res.status(statusCode).render("error", { err });
 });
 
+//Start the server
 app.listen(3000, () => {
   console.log("on PORT 3000");
 });
