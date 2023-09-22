@@ -134,7 +134,7 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-// Middleware to set up local variables for views
+// Middleware for passing user data and flash messages to views
 app.use((req, res, next) => {
   res.locals.currentUser = req.user;
   res.locals.success = req.flash("success");
@@ -149,12 +149,12 @@ app.use("/restaurants", restaurantRoutes);
 //Review routes
 app.use("/restaurants/:id/reviews", reviewRoutes);
 
-// Default route
+// Home page route
 app.get("/", (req, res) => {
   res.render("home");
 });
 
-// Catch-all route for handling 404 errors
+// Catch-all route for undefined routes and throw an error
 app.all("*", (req, res, next) => {
   next(new ExpressError("Page Not Found", 404));
 });
