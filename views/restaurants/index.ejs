@@ -2,15 +2,15 @@
 <% layout('layouts/boilerplate')%>
 
 <!-- Map container -->
-<div id="map"></div>
+<div class="mb-3" id="map"></div>
 
 <div class="container">
-    <h1>All restaurants</h1>
-
     <!-- Button to add a new restaurant -->
     <div>
-        <a href="/restaurants/new">Add Campground</a>
+        <a class="mb-3 btn btn-primary" href="/restaurants/new">Add Restaurant</a>
     </div>
+
+    <h1>All restaurants</h1>
 
     <!-- Loop through all restaurants and display their details -->
     <% for (let restaurant of restaurants){%>
