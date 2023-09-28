@@ -1,13 +1,22 @@
+<!-- Using the boilerplate layout -->
 <% layout('layouts/boilerplate')%>
+
+<!-- Map container -->
 <div id="map"></div>
+
 <div class="container">
     <h1>All restaurants</h1>
+
+    <!-- Button to add a new restaurant -->
     <div>
         <a href="/restaurants/new">Add Campground</a>
     </div>
+
+    <!-- Loop through all restaurants and display their details -->
     <% for (let restaurant of restaurants){%>
     <div class="card mb-3">
         <div class="row">
+            <!-- Display restaurant image. If none, a default is shown. -->
             <div class="col-md-4">
                 <%if(restaurant.images.length) {%>
                 <img crossorigin="anonymous" class="img-fluid" alt="" src="<%=restaurant.images[0].url%>">
@@ -16,6 +25,8 @@
                     src="https://res.cloudinary.com/dgegokbk6/image/upload/v1695273206/GourmetGuide/viseysket4wzbbjezzmp.jpg">
                 <% } %>
             </div>
+            
+            <!-- Display restaurant details like title, description, location, and a view button. -->
             <div class="col-md-8">
                 <div class="card-body">
                     <h5 class="card-title"><%= restaurant.title %> </h5>
@@ -32,8 +43,11 @@
     <% }%>
 </div>
 
+<!-- Embed the Mapbox token and restaurants data as JavaScript variables -->
 <script>
     const mapToken = '<%-process.env.MAPBOX_TOKEN%>';
     const restaurants ={features: <%- JSON.stringify(restaurants) %>};
 </script>
+
+<!-- Link to the JavaScript file responsible for handling the map functionality -->
 <script src="/js/clusterMap.js"></script>

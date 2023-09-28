@@ -1,20 +1,24 @@
+<!-- Using the boilerplate layout -->
 <% layout('layouts/boilerplate.ejs') %>
 
 <div class="row">
+    <!-- Title for the form -->
     <h1 class="text-center">New Restaurant</h1>
+
+    <!-- Form container -->
     <div class="col-md-6 offset-md-3">
+        <!-- Begin form to add a new restaurant -->
         <form action="/restaurants" method="POST" novalidate class="validation-form" enctype="multipart/form-data">
+            
+            <!-- Input for restaurant name -->
             <div class="mb-3">
                 <label class="form-label" for="name">Restaurant Name</label>
                 <input class="form-control" type="text" name="restaurant[title]" id="name" required>
-                <div class="valid-feedback">
-                    Looks good!
-                </div>
-                <div class="invalid-feedback">
-                    Please Add a Name!
-                </div>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please Add a Name!</div>
             </div>
 
+            <!-- Dropdown to select price range -->
             <div class="mb-3 ">
                 <div class="input-group">
                     <label class="input-group-text" for="priceRange">Price Range</label>
@@ -24,50 +28,42 @@
                         <option value="$$">$$</option>
                         <option value="$$$">$$$</option>
                     </select>
-                    <div class="invalid-feedback">
-                        Choose the Price Range!
-                    </div>
+                    <div class="invalid-feedback">Choose the Price Range!</div>
                 </div>
             </div>
 
+            <!-- Input for restaurant location -->
             <div class="mb-3">
                 <label class="form-label" for="location">Location</label>
                 <input class="form-control" type="text" name="restaurant[location]" id="location" required>
-                <div class="valid-feedback">
-                    Looks good!
-                </div>
-                <div class="invalid-feedback">
-                    Please Add The Location!
-                </div>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please Add The Location!</div>
             </div>
 
+            <!-- Input to upload images -->
             <div class="mb-3">
                 <label for="image" for="image" class="form-label">Add Images</label>
                 <input class="form-control" type="file" id="image" name="image" multiple required>
-                <div class="valid-feedback">
-                    Looks good!
-                </div>
-                <div class="invalid-feedback">
-                    Please Add an Image!
-                </div>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please Add an Image!</div>
             </div>
 
+            <!-- Textarea for restaurant description -->
             <div class="mb-3">
                 <label class="form-label" for="description">Description</label>
                 <textarea class="form-control" type="text" name="restaurant[description]" id="description"
                     required></textarea>
-                <div class="valid-feedback">
-                    Looks good!
-                </div>
-                <div class="invalid-feedback">
-                    Please Add a Description!
-                </div>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please Add a Description!</div>
             </div>
+            
+            <!-- Button to submit form -->
             <div class="mb-3">
                 <button class="btn btn-success">Add Restaurant</button>
             </div>
-
         </form>
+
+        <!-- Button to navigate back to the list of restaurants -->
         <a href="/restaurants" class="btn btn-danger">Go back</a>
     </div>
 </div>

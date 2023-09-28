@@ -1,35 +1,47 @@
+<!-- Using the boilerplate layout -->
 <% layout('layouts/boilerplate')%>
 
+<!-- Main container for the login page -->
 <div class="container d-flex justify-content-center align-items-center mt-5">
     <div class="row">
+        <!-- Define column size and offset for centering the card on various devices -->
         <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
+            <!-- Card that contains the login form and image -->
             <div class="card shadow">
+                <!-- Image for the login card -->
                 <img src="https://images.pexels.com/photos/3184192/pexels-photo-3184192.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                    alt="" class="card-img-top" />
+                    alt="Login Image" class="card-img-top" />
                 <div class="card-body">
                     <h5 class="card-title">Login</h5>
+                    <!-- Form for login credentials -->
                     <form action="/login" method="POST" class="validated-form" novalidate>
+                        <!-- Username input field -->
                         <div class="mb-3">
                             <label class="form-label" for="username">Username</label>
                             <input class="form-control" type="text" id="username" name="username" autofocus required>
+                            <!-- Feedback for valid input -->
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
+                            <!-- Feedback for invalid input -->
                             <div class="invalid-feedback">
                                 Please Enter a Username!
                             </div>
                         </div>
-
+                        <!-- Password input field -->
                         <div class="mb-3">
                             <label class="form-label" for="password">Password</label>
                             <input class="form-control" type="password" id="password" name="password" required>
+                            <!-- Feedback for valid input -->
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
+                            <!-- Feedback for invalid input -->
                             <div class="invalid-feedback">
                                 Please Enter a Password!
                             </div>
                         </div>
+                        <!-- Button to submit the form -->
                         <div class="d-grid gap-2 mx-auto">
                             <button class="btn btn-success btn-block">Login</button>
                         </div>

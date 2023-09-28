@@ -1,3 +1,4 @@
+// Helps seed random names for the restaurants
 module.exports.descriptors = [
   "Rustic",
   "Gourmet",

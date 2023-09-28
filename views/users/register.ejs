@@ -1,46 +1,60 @@
+<!-- Using the boilerplate layout -->
 <% layout('layouts/boilerplate.ejs') %>
 
+<!-- Main container for the registration page -->
 <div class="container d-flex justify-content-center align-items-center mt-5">
     <div class="row">
+        <!-- Define column size and offset for centering the card on various devices -->
         <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
+            <!-- Card that contains the registration form and image -->
             <div class="card shadow">
+                <!-- Image for the registration card -->
                 <img src="https://images.pexels.com/photos/3184192/pexels-photo-3184192.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                    alt="" class="card-img-top" />
+                    alt="Registration Image" class="card-img-top" />
                 <div class="card-body">
                     <h5 class="card-title">Register</h5>
+                    <!-- Form for registration credentials -->
                     <form action="/register" method="POST" class="validated-form" novalidate>
+                        <!-- Username input field -->
                         <div class="mb-3">
                             <label class="form-label" for="username">Username</label>
                             <input class="form-control" type="text" id="username" name="username" autofocus required>
+                            <!-- Feedback for valid input -->
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
+                            <!-- Feedback for invalid input -->
                             <div class="invalid-feedback">
                                 Please Enter a Username!
                             </div>
                         </div>
-
+                        <!-- Email input field -->
                         <div class="mb-3">
                             <label class="form-label" for="email">Email</label>
                             <input class="form-control" type="email" name="email" id="email" required>
+                            <!-- Feedback for valid input -->
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
+                            <!-- Feedback for invalid input -->
                             <div class="invalid-feedback">
                                 Please Enter an Email!
                             </div>
                         </div>
-
+                        <!-- Password input field -->
                         <div class="mb-3">
                             <label class="form-label" for="password">Password</label>
                             <input class="form-control" type="password" id="password" name="password" required>
+                            <!-- Feedback for valid input -->
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
+                            <!-- Feedback for invalid input -->
                             <div class="invalid-feedback">
                                 Please Enter a Password!
                             </div>
                         </div>
+                        <!-- Button to submit the registration form -->
                         <div class="d-grid gap-2 mx-auto">
                             <button class="btn btn-success btn-block">Register</button>
                         </div>

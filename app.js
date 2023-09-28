@@ -169,7 +169,7 @@ app.use((err, req, res, next) => {
   res.status(statusCode).render("error", { err });
 });
 
-//Start the server
+// Start the server
 app.listen(3000, () => {
   console.log("on PORT 3000");
 });

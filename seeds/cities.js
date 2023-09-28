@@ -1,3 +1,4 @@
+// List of Canadian cities for seeding
 module.exports = [
   {
     city: "Toronto",

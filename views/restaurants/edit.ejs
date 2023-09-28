@@ -1,14 +1,21 @@
+<!-- Use the boilerplate layout for this view -->
 <% layout('layouts/boilerplate.ejs') %>
 
 <div class="row">
     <h1 class="text-center">Edit Restaurant</h1>
+    
+    <!-- Form for editing restaurant details -->
     <div class="col-6 offset-3">
+        <!-- The form action includes a query parameter to simulate the PUT request (as HTML forms don't natively support PUT) -->
         <form action="/restaurants/<%= restaurant._id %>?_method=PUT" method="POST" novalidate class="validation-form"
             enctype="multipart/form-data">
+            
+            <!-- Restaurant Name input field -->
             <div class="mb-3">
                 <label class="form-label" for="name">Restaurant Name</label>
                 <input class="form-control" type="text" name="restaurant[title]" id="name" required
                     value="<%= restaurant.title%>">
+                <!-- Feedback for validation -->
                 <div class="valid-feedback">
                     Looks good!
                 </div>
@@ -17,10 +24,12 @@
                 </div>
             </div>
 
-            <div class=" mb-3 ">
-                <div class=" input-group">
+            <!-- Dropdown for selecting price range of the restaurant -->
+            <div class="mb-3">
+                <div class="input-group">
                     <label class="input-group-text" for="priceRange">Price Range</label>
                     <select class="form-select" id="priceRange" name="restaurant[priceRange]" required>
+                        <!-- Options for price range, with logic to set the previously selected value -->
                         <option value="$" <%= restaurant.priceRange === '$' ? 'selected': '' %>>$</option>
                         <option value="$$" <%= restaurant.priceRange === '$$' ? 'selected': '' %>>$$</option>
                         <option value="$$$" <%= restaurant.priceRange === '$$$' ? 'selected': '' %>>$$$</option>
@@ -28,10 +37,12 @@
                 </div>
             </div>
 
+            <!-- Input for location of the restaurant -->
             <div class="mb-3">
                 <label class="form-label" for="location">Location</label>
                 <input class="form-control" type="text" name="restaurant[location]" id="location" required
                     value="<%= restaurant.location%>">
+                <!-- Feedback for validation -->
                 <div class="valid-feedback">
                     Looks good!
                 </div>
@@ -40,9 +51,11 @@
                 </div>
             </div>
 
+            <!-- Input for adding images -->
             <div class="mb-3">
-                <label for="image" for="image" class="form-label">Add Images</label>
+                <label for="image" class="form-label">Add Images</label>
                 <input class="form-control" type="file" id="image" name="image" multiple>
+                <!-- Feedback for validation -->
                 <div class="valid-feedback">
                     Looks good!
                 </div>
@@ -51,20 +64,25 @@
                 </div>
             </div>
 
-            <div class=" mb-3">
+            <!-- Textarea for restaurant description -->
+            <div class="mb-3">
                 <label class="form-label" for="description">Description</label>
                 <textarea class="form-control" type="text" name="restaurant[description]" required
                     id="description"><%= restaurant.description%></textarea>
+                <!-- Feedback for validation -->
                 <div class="valid-feedback">
                     Looks good!
                 </div>
                 <div class="invalid-feedback">
                     Please Add a Description!
                 </div>
+
+                <!-- Display images and provide option to delete them -->
                 <div class="mb-3">
                     <% restaurant.images.forEach(function (img, i){%>
                     <img src="<%= img.thumbnail %>" class="img-thumbnail" alt="">
                     <div class="form-check-inline">
+                        <!-- Checkbox to mark images for deletion -->
                         <input type="checkbox" id="image-<%= i %>" name="deleteImages[]" value="<%= img.filename %>">
                     </div>
                     <label for="image-<%= i %>">Delete?</label>
@@ -72,9 +90,11 @@
                 </div>
             </div>
 
-            <button class=" mb-3 btn btn-success">Save</button>
-
+            <!-- Button to submit the form and save changes -->
+            <button class="mb-3 btn btn-success">Save</button>
         </form>
+
+        <!-- Link to go back to the restaurant's details page -->
         <a href="/restaurants/<%= restaurant._id %>" class="btn btn-dark">Go back</a>
     </div>
 </div>

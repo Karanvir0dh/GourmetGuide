@@ -1,29 +1,36 @@
+// Set the Mapbox token for authentication
 mapboxgl.accessToken = mapToken;
+
+// Initialize a new map instance
 const map = new mapboxgl.Map({
-  container: "map",
-  style: "mapbox://styles/mapbox/light-v11",
-  center: [-97.8558, 55.7435],
-  zoom: 3,
+  container: "map", // The HTML element to bind the map to
+  style: "mapbox://styles/mapbox/light-v11", // Style of the map
+  center: [-97.8558, 55.7435], // Initial geographical centerpoint
+  zoom: 3, // Initial zoom level
 });
 
+// Add navigation controls to the map
 map.addControl(new mapboxgl.NavigationControl());
 
+// Execute the following after the map has loaded
 map.on("load", () => {
+  // Add the restaurants data source to the map, with clustering enabled
   map.addSource("restaurants", {
     type: "geojson",
-
     data: restaurants,
     cluster: true,
-    clusterMaxZoom: 14, // Max zoom to cluster points on
-    clusterRadius: 50, // Radius of each cluster when clustering points
+    clusterMaxZoom: 14,
+    clusterRadius: 50,
   });
 
+  // Add a layer to visualize clustered data
   map.addLayer({
     id: "clusters",
     type: "circle",
     source: "restaurants",
     filter: ["has", "point_count"],
     paint: {
+      // Define circle color and radius based on cluster point count
       "circle-color": [
         "step",
         ["get", "point_count"],
@@ -37,24 +44,28 @@ map.on("load", () => {
     },
   });
 
+  // Add a layer to show the number inside clusters
   map.addLayer({
     id: "cluster-count",
     type: "symbol",
     source: "restaurants",
     filter: ["has", "point_count"],
     layout: {
+      // Define text properties for the cluster count
       "text-field": ["get", "point_count_abbreviated"],
       "text-font": ["DIN Offc Pro Medium", "Arial Unicode MS Bold"],
       "text-size": 12,
     },
   });
 
+  // Add a layer to visualize individual data points
   map.addLayer({
     id: "unclustered-point",
     type: "circle",
     source: "restaurants",
     filter: ["!", ["has", "point_count"]],
     paint: {
+      // Define circle properties for individual points
       "circle-color": "#11b4da",
       "circle-radius": 4,
       "circle-stroke-width": 1,
@@ -62,11 +73,12 @@ map.on("load", () => {
     },
   });
 
-  // inspect a cluster on click
+  // Event handler for when a cluster is clicked
   map.on("click", "clusters", (e) => {
+    // Fetch information about the clicked cluster and zoom into it
     const features = map.queryRenderedFeatures(e.point, {
       layers: ["clusters"],
-    });
+    });    
     const clusterId = features[0].properties.cluster_id;
     map
       .getSource("restaurants")
@@ -76,15 +88,13 @@ map.on("load", () => {
         map.easeTo({
           center: features[0].geometry.coordinates,
           zoom: zoom,
-        });
+       });
       });
   });
 
-  // When a click event occurs on a feature in
-  // the unclustered-point layer, open a popup at
-  // the location of the feature, with
-  // description HTML from its properties.
+  // Event handler for when an individual point is clicked
   map.on("click", "unclustered-point", (e) => {
+    // Display a popup with details about the clicked point
     const coordinates = e.features[0].geometry.coordinates.slice();
     const { popUpMarkup } = e.features[0].properties;
 
@@ -101,6 +111,7 @@ map.on("load", () => {
       .addTo(map);
   });
 
+  // Change the cursor to a pointer when hovering over clusters
   map.on("mouseenter", "clusters", () => {
     map.getCanvas().style.cursor = "pointer";
   });
