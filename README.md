@@ -17,7 +17,7 @@ GourmetGuide is a web platform that allows users to discover and review restaura
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/gourmetguide.git
+   git clone https://github.com/Karanvir0dh/GourmetGuide.git
    ```
 
 2. **Navigate to the directory**:
