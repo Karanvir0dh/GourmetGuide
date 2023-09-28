@@ -32,7 +32,7 @@ GourmetGuide is a web platform that allows users to discover and review restaura
 
 4. **Start the server**:
    ```bash
-   npm start
+   node app.js
    ```
 
 ## Technologies Used
