@@ -32,7 +32,6 @@ module.exports.restaurantSchema = Joi.object({
   restaurant: Joi.object({
     title: Joi.string().required().escapeHTML(),
     priceRange: Joi.required(),
-    // images: Joi.array().required(),
     location: Joi.string().required().escapeHTML(),
     description: Joi.string().required().escapeHTML(),
   }).required(),

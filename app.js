@@ -49,7 +49,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(mongoSanitize());
 
 // Configure sessions with MongoDB for persistence
-const secret = process.env.SECRET
+const secret = process.env.SECRET;
 const store = MongoStore.create({
   mongoUrl: dbUrl,
   touchAfter: 24 * 60 * 60,
@@ -170,6 +170,7 @@ app.use((err, req, res, next) => {
 });
 
 // Start the server
-app.listen(3000, () => {
-  console.log("on PORT 3000");
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`Serving on port ${port}`);
 });
