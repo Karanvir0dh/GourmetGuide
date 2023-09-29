@@ -6,6 +6,8 @@ Welcome to GourmetGuide - a place where food lovers can explore a variety of res
 
 GourmetGuide is a web platform that allows users to discover and review restaurants. Users can register an account to add their own restaurant recommendations or comment on others. The site features a modern, responsive design with user authentication.
 
+🚀 Live Demo: https://gourmet-guide.onrender.com/
+
 ## Features
 
 - **User Authentication**: Register and log in to personalize your experience.
