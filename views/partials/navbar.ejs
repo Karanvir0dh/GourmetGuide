@@ -12,7 +12,7 @@
                 <a class="nav-link" href="/restaurants/new">New Restaurant</a>
             </div>
             <div class="navbar-nav ms-auto">
-                <% if(!currentUser) {%>
+                <% if(!locals.currentUser) {%>
                 <a class='nav-link' href="/login">Login</a>
                 <a class='nav-link' href="/register">Sign Up</a>
                 <% } else{%>
